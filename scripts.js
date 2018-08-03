@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     let id = 1
 
-  
  
 
     button.addEventListener("click", function addDiv() {
@@ -34,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
             div.addEventListener("mouseout", function () {
-
-                div.innerText = ""
+                
+                divtext.remove(this.innerText)
 
 
 
@@ -53,20 +52,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
         function remove() {
+
         
 
             if (div.id %2 === 0){
-                div.remove(id.nextElementSibling);
-                console.log(div.id +" even")
-            } else if (div.id %2 === 1){
-                
-                console.log(div.id + " odd")
+                if (div.nextSibling){
+                document.body.removeChild(div.nextSibling)};
+            }else {
+                alert("previous div does not exist")
             }
+            
+                
+        
+              if (div.id %2 === 1){
+                  if (div.previousSibling){
+                document.body.removeChild(div.previousSibling)};
+        }else {
+            alert("Next div does not exist")
+        };
+        
     
         }
         
 
-        div.addEventListener("click", function () {
+        div.addEventListener("dblclick", function () {
             remove()
         });
 
@@ -84,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         return randomColor
 
     }
-    
+
 
   
     

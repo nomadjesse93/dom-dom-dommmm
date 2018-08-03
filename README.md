@@ -26,6 +26,7 @@ Covalence
         * If the `id` of the square is odd:
             * The square before the clicked square should be removed from the page
             * If there isn't a square before the clicked square, display an alert indicating so
+            (* CANT GET THE ALERTS TO DISPLAY WHEN THEYRE SUPPOSED TO)
 
 ## Hints
 * You will be using DOM functions to complete this portion of the lab
@@ -35,3 +36,5 @@ Covalence
 * All of the squares have the same class name
     * You can use that to give them a uniform appearance using CSS
     * You can also use that to find out how many squares are on the screen (think about the DOM functions)
+
+    
